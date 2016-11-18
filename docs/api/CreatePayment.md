@@ -2,52 +2,52 @@
 # *URL:* `/createPayment`
 # *Method:* `POST`
 # *Data Params:*
-- Required:
- - *Merchant*
-   - Merchant name
-   - merchant=[String]
-   - example: `merchant=Obuvna u Hovna`
++ Required:
+  - *Merchant*
+    + Merchant name
+    + merchant=[String]
+    - example: `merchant=Obuvna u Hovna`
 
- - *Price*
-   - Price of payment
-   - price=[Positive Number Excluding Zero]
-   - example: `price=1223`
+  - *Price*
+    - Price of payment
+    - price=[Positive Number Excluding Zero]
+    - example: `price=1223`
 
- - *Currency*
-   - Currency of payment
-   - curr=[Internation Currency Symbol]
-   - example: `curr=CZK`
+  - *Currency*
+    - Currency of payment
+    - curr=[Internation Currency Symbol]
+    - example: `curr=CZK`
 
- - *Label*
-   - Label for payment
-   - label=[String]
-   - example: `label=Novy botky Adidasky`
+  - *Label*
+    - Label for payment
+    - label=[String]
+    - example: `label=Novy botky Adidasky`
 
- - *RefId*
-   - Reference identificator of payment in merchant's system
-   - refId=[String]
-   - example: `refId=axg1a2Esd42354`
+  - *RefId*
+    - Reference identificator of payment in merchant's system
+    - refId=[String]
+    - example: `refId=axg1a2Esd42354`
 
- - *Category*
-   - Category of payment
-   - cat=[One of list: (???, ???, ???)]
-   - example: `cat=???`
+  - *Category*
+    - Category of payment
+    - cat=[One of list: (???, ???, ???)]
+    - example: `cat=???`
 
   - *Method*
-   - Method of payment
-   - method=[One of list: (card, ???, ???)]
-   - example: `method=card`
+    - Method of payment
+    - method=[One of list: (card, ???, ???)]
+    - example: `method=card`
 
- - *Prepare Only - Flag*
-   - Should payment be straight executed, or only prepared
-   - prepareOnly=[Boolean]
-   - example: `prepareOnly=true`
+  - *Prepare Only - Flag*
+    - Should payment be straight executed, or only prepared
+    - prepareOnly=[Boolean]
+    - example: `prepareOnly=true`
 
- - *Secret*
-   - Secret password, given to merchant with account
-   - Must match password in db, associated with merchant
-   - secret=[String]
-   - example: `secret=123abc`
+  - *Secret*
+    - Secret password, given to merchant with account
+    - Must match password in db, associated with merchant
+    - secret=[String]
+    - example: `secret=123abc`
 
 Example:
 ```
