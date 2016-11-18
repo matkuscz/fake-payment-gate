@@ -1,8 +1,10 @@
 const express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var randomString = require('./utils/randomString');
 
 var Payment = require('./models/payment');
+var Merchant = require('./models/merchant');
 
 var PORT = 666;
 var app = express();
@@ -84,7 +86,24 @@ app.get('/karta/:id', function (request, response) {
         id: request.params.id,
       });
   });
+});
 
+app.post('/createMerchant', function (request, response) {
+  var merchant = new Merchant({
+    'name': request.body.name,
+    'successRedirect': request.body.successRedirect,
+    'failedRedirect': request.body.failedRedirect,
+    'unknownRedirect': request.body.unknownRedirect,
+    'secret': randomString(),
+  });
+
+  console.log("New merchant: %j", merchant);
+
+  merchant.save();
+
+  response.json({
+    secret: merchant.secret,
+  });
 });
 
 app.listen(PORT, function(error) {

@@ -4,7 +4,7 @@ Payment Gate Fake API for testing integration of simple payment gates.
 
 API
 ===
-Documentation in folder `docs/api`
+Documentation in folder `docs/api/API.md`
 
 UP & Running
 ============

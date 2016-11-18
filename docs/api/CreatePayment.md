@@ -94,3 +94,6 @@ $.ajax({
 ```
 
 # *Notes:*
+Creates payment. The payment is created on server and persisted to database. Client is then given `transId` which identifies payment in payment gate system and `redirectUrl` on which he should be redirected to enter credit card and submit payment.
+After that payment is submited, this API redirects client  to `config.merchantApi.payment_success:transId:refId`, `config.merchantApi.payment_failed:transId:refId` or
+`config.merchantApi.payment_unknown:transId:refId`URL.
