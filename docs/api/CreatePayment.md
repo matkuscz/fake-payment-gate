@@ -51,26 +51,45 @@
 
 Example:
 ```
-   {
-     payment : {
-       merchant : "Obuvna u Hovna",
-       price : 1223,
-       curr : "CZK"
-       label : "Novy botky Adidasky",
-       refId : "axg1a2Esd42354",
-       cat : "shoes",
-       method : "card",
-       prepareOnly : true,
-       secret : "123abc",
-     }
-   }
+{
+ payment : {
+   merchant : "Obuvna u Hovna",
+   price : 1223,
+   curr : "CZK"
+   label : "Novy botky Adidasky",
+   refId : "axg1a2Esd42354",
+   cat : "shoes",
+   method : "card",
+   prepareOnly : true,
+   secret : "123abc",
+ }
+}
 ```
 # *Success Response:*
 ## *Code:* `200`
 ## *Content:*
+- Code
+  - Number
+  - `{ code: 0 }`
+- Message
+  - String
+  - `{ message: "OK" }`
 - Transaction Id
- - Number
- - `{ transId: 12 }`
+  - String
+  - `{ transId: 12 }`
+- Redirect
+  - String
+  - `{ redirect: "http://localhost:666/pay/aaa123" }`
+- Example
+  ```
+  {
+    code: 0,
+    message: "OK",
+    transId: "12",
+    redirect: "http://localhost:666/pay/aaa123",
+  }
+  ```
+
 
 # *Error Response:*
 ## *Code:* `422 Unprocessable Entry`

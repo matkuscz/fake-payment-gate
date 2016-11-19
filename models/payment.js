@@ -13,6 +13,7 @@ var paymentSchema = mongoose.Schema({
   prepareOnly : Boolean,
   secret      : String,
   transId     : String,
+  state       : String,
 });
 
 module.exports = mongoose.model('Payment', paymentSchema);

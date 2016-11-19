@@ -34,7 +34,7 @@
 Example:
 ```
    {
-     merchant : {
+     pay : {
        name : "Obuvna u Hovna",
        successRedirect : "http://localhost:1337/platba/success/",
        failedRedirect : "http://localhost:1337/platba/failed/",
